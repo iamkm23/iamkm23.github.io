@@ -62,53 +62,61 @@
     <div class="document-list">
         <div class="document-item">
             <div class="document-name">Documents Index</div>
-            <a href="public/0.0%20Documents-Index.pdf" class="view-link" target="_blank">View</a>
+            <a href="javascript:void(0)" onclick="openPdf('public/0.0 Documents-Index.pdf')" class="view-link">View</a>
         </div>
         
         <div class="document-item">
             <div class="document-name">Summary List of Equipment</div>
-            <a href="public/0.1%20Summary%20List%20of%20Equipment.pdf" class="view-link" target="_blank">View</a>
+            <a href="javascript:void(0)" onclick="openPdf('public/0.1 Summary List of Equipment.pdf')" class="view-link">View</a>
         </div>
         
         <div class="document-item">
             <div class="document-name">Appendix 01 - 22kV Switchgear</div>
-            <a href="public/Appendix%2001%20-%2022kV%20Switchgear.pdf" class="view-link" target="_blank">View</a>
+            <a href="javascript:void(0)" onclick="openPdf('public/Appendix 01 - 22kV Switchgear.pdf')" class="view-link">View</a>
         </div>
         
         <div class="document-item">
             <div class="document-name">Appendix 02 - 11kV RMU</div>
-            <a href="public/Appendix%2002%20-%2011kV%20RMU.pdf" class="view-link" target="_blank">View</a>
+            <a href="javascript:void(0)" onclick="openPdf('public/Appendix 02 - 11kV RMU.pdf')" class="view-link">View</a>
         </div>
         
         <div class="document-item">
             <div class="document-name">Appendix 04 - 11kV Coupler</div>
-            <a href="public/Appendix%2004%20-%2011kV%20Coupler.pdf" class="view-link" target="_blank">View</a>
+            <a href="javascript:void(0)" onclick="openPdf('public/Appendix 04 - 11kV Coupler.pdf')" class="view-link">View</a>
         </div>
         
         <div class="document-item">
             <div class="document-name">Appendix 05 - LV MSB</div>
-            <a href="public/Appendix%2005%20-%20LV%20MSB.pdf" class="view-link" target="_blank">View</a>
+            <a href="javascript:void(0)" onclick="openPdf('public/Appendix 05 - LV MSB.pdf')" class="view-link">View</a>
         </div>
         
         <div class="document-item">
             <div class="document-name">Appendix 06 - 22kV and 11kV MV Cable</div>
-            <a href="public/Appendix%2006%20-%2022kV%20and%2011kV%20MV%20Cable.pdf" class="view-link" target="_blank">View</a>
+            <a href="javascript:void(0)" onclick="openPdf('public/Appendix 06 - 22kV and 11kV MV Cable.pdf')" class="view-link">View</a>
         </div>
         
         <div class="document-item">
             <div class="document-name">Appendix 07 - LV and Earth Cable</div>
-            <a href="public/Appendix%2007%20-%20LV%20and%20Earth%20Cable.pdf" class="view-link" target="_blank">View</a>
+            <a href="javascript:void(0)" onclick="openPdf('public/Appendix 07 - LV and Earth Cable.pdf')" class="view-link">View</a>
         </div>
         
         <div class="document-item">
             <div class="document-name">Appendix 08 - Battery and Battery Charger</div>
-            <a href="public/Appendix%2008%20-%20Battery%20and%20Battery%20Charger.pdf" class="view-link" target="_blank">View</a>
+            <a href="javascript:void(0)" onclick="openPdf('public/Appendix 08 - Battery and Battery Charger.pdf')" class="view-link">View</a>
         </div>
         
         <div class="document-item">
             <div class="document-name">Appendix 09 - Earth Continuity Relay for Pilot Wire Protection</div>
-            <a href="public/Appendix%2009%20-%20Earth%20Continuity%20Relay%20for%20Pilot%20Wire%20Protection.pdf" class="view-link" target="_blank">View</a>
+            <a href="javascript:void(0)" onclick="openPdf('public/Appendix 09 - Earth Continuity Relay for Pilot Wire Protection.pdf')" class="view-link">View</a>
         </div>
     </div>
+
+    <script>
+        function openPdf(path) {
+            const encodedPath = btoa(path);
+            const decodedPath = atob(encodedPath);
+            window.open(decodedPath, '_blank');
+        }
+    </script>
 </body>
 </html>
