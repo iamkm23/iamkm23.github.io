@@ -1,0 +1,34 @@
+= KMO Technical Documentation Portal
+:navtitle: Home
+:description: Central portal for testing procedures, technical reference, and project resources.
+
+Welcome to the **KMO Technical Documentation Portal**. This central hub provides access to standardized testing procedures, technical specifications, and downloadable resources for electrical engineering projects.
+
+== Quick Access
+
+[cols="1,1", frame=none, grid=none]
+|===
+| [.tile]
+xref:1.0@testing-procedure:ROOT:index.adoc[Testing Procedures]
+Standardized guides for MV Cable testing, Transformer Hi-Pot testing, and more.
+
+| [.tile]
+xref:1.0@downloads:ROOT:index.adoc[Document Library]
+Downloadable checklists, spreadsheets, and technical guidelines.
+|===
+
+== Core Objectives
+
+This portal is designed to ensure:
+
+* **Standardization:** Consistent testing methodologies across all project sites.
+* **Accuracy:** Access to the latest revisions of procedures and specifications.
+* **Efficiency:** Rapid retrieval of necessary documentation for field personnel.
+
+== Documentation Components
+
+[horizontal]
+Testing Procedure:: Detailed step-by-step guides for site testing activities, including safety requirements and pass/fail criteria.
+Document Library:: A repository of downloadable assets, including safety clearances and reporting templates.
+
+TIP: Navigate using the top menu bar to switch between main document categories.

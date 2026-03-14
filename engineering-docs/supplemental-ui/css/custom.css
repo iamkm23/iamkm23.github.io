@@ -1,0 +1,56 @@
+:root {
+  --body-font-family: 'Inter', sans-serif;
+  --heading-font-family: 'Inter', sans-serif;
+  --monospace-font-family: 'Fira Code', 'Courier New', monospace;
+} /* end :root */
+
+/* Control the overall global text size here.
+   Everything else in Antora (headers, sidebars, etc) scales relative to this number! */
+html {
+  font-size: 0.95em; /* Reduced from 1.0em for a more compact look */
+}
+
+body {
+  font-family: var(--body-font-family);
+}
+
+/* Control the Right-Side Table of Contents font size */
+.toc .toc-menu h3 {
+  font-size: 1.1rem !important; /* The 'Contents' heading */
+}
+
+.toc .toc-menu ul {
+  font-size: 0.85rem !important; /* The actual links */
+
+}
+
+h1, h2, h3, h4, h5, h6,
+.doc h1, .doc h2, .doc h3, .doc h4, .doc h5, .doc h6 {
+  font-family: var(--heading-font-family);
+  border-bottom: none !important;
+}
+
+.doc pre:not(.highlight), .doc pre.highlight code {
+  font-family: var(--monospace-font-family);
+}
+
+/* Control the maximum width of the main text area */
+.doc {
+  max-width: 75rem !important; /* Increased from 75rem for a wider content spread */
+}
+
+/* Ensure images are visible and correctly sized when printing to PDF */
+@media print {
+  .doc {
+    max-width: none !important; /* Allow content to use full paper width */
+  }
+  .imageblock img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+  /* Optional: Hide the "Edit this Page" link in prints */
+  .edit-this-page {
+    display: none !important;
+  }
+}

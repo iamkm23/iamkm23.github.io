@@ -1,0 +1,16 @@
+= Terms of Service
+:navtitle: Terms
+
+Welcome to the Terms of Service for KMO Technical Documentation.
+
+== 1. Acceptance of Terms
+By accessing this documentation portal, you agree to be bound by these Terms of Service.
+
+== 2. Use of Content
+The content provided in this portal, including testing procedures and technical documents, is for informational purposes related to KMO projects.
+
+== 3. Intellectual Property
+All documentation, diagrams, and content are the property of KMO unless otherwise stated.
+
+== 4. Disclaimer
+While we strive for accuracy, KMO is not liable for any errors or omissions in the documentation provided on this portal.

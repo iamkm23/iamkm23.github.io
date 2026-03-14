@@ -1,0 +1,18 @@
+site:
+  title: Documentation
+  url: https://iamkm23.github.io/engineering-docs
+  start_page: docs-main::index.adoc
+content:
+  sources:
+    - url: ../
+      branches: HEAD
+      start_paths:
+        - engineering-docs/docs-main
+        - engineering-docs/docs-testing-procedure
+        - engineering-docs/docs-downloads
+        - engineering-docs/docs-lifting-plan
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./supplemental-ui

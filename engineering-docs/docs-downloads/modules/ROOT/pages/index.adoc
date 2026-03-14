@@ -1,0 +1,10 @@
+= Downloads
+:navtitle: Document Library
+
+Welcome to the Document Library. Here you can find downloadable resources, checklists, and guidelines related to the testing procedures.
+
+== Testing Guidelines
+* link:{attachmentsdir}/cable_testing_guidelines_v1.txt[MV Cable Testing Guidelines v1.0 (TXT)] - Overview of general requirements for medium voltage cable testing.
+
+== Safety Checklists
+* link:{attachmentsdir}/safety_clearance_checklist.txt[Safety Clearance Checklist (TXT)] - Mandatory checklist to be completed prior to initiating high voltage tests.

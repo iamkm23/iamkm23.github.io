@@ -1,0 +1,5 @@
+name: testing-procedure
+title: Testing Procedure
+version: "1.0"
+nav:
+  - modules/ROOT/nav.adoc

@@ -1,0 +1,46 @@
+name: Deploy Engineering Docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "engineering-docs/**"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install Dependencies
+        working-directory: engineering-docs
+        run: npm ci
+
+      - name: Build Documentation
+        working-directory: engineering-docs
+        run: npm run build
+
+      - name: Prepare Public Folder
+        run: |
+          mkdir -p public/engineering-docs
+          touch public/.nojekyll
+          cp -r engineering-docs/build/site/* public/engineering-docs/
+          # Create a simple redirect or landing page at the root
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=engineering-docs/docs-main/1.0/index.html"></head></html>' > public/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: public
+          branch: gh-pages
+          clean: true # This will ensure the root is clean and has our .nojekyll

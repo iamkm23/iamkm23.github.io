@@ -1,0 +1,4 @@
+Standard safety clearance checklist for high voltage testing. 
+1. Establish perimeter.
+2. Confirm grounding.
+3. Verify test equipment calibration.

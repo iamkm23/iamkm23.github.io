@@ -1,0 +1,13 @@
+= Lifting Plans
+:navtitle: Lifting Plans
+
+Welcome to the **Lifting Plans** section. This area contains detailed procedures, rigging specifications, and safety protocols for heavy lifting operations across our project sites.
+
+== Active Lifting Plans
+
+* xref:cr210-superstructure-lifting.adoc[CR210 Superstructure Lifting Plan] - Comprehensive guide for 200T crane operations.
+
+[TIP]
+====
+Ensure all personnel involved in lifting operations have attended the mandatory toolbox talk and verified all rigging equipment prior to the lift.
+====

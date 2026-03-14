@@ -1,0 +1,11 @@
+= Privacy Policy
+:navtitle: Privacy
+
+== 1. Data Collection
+We do not collect personal data from users browsing this static documentation portal.
+
+== 2. Usage Logs
+Internal server logs may record basic access information (IP address, page visited) for security and performance monitoring.
+
+== 3. Cookies
+This site may use minimal cookies for UI preferences if applicable (e.g., dark mode settings).

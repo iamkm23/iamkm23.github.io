@@ -1,0 +1,321 @@
+= AsciiDoc Cheatsheet
+:navtitle: AsciiDoc Cheatsheet
+:sectnums:
+:toc: left
+:toclevels: 3
+
+== Text Formatting
+
+*bold text* +
+_italic text_ +
+*_bold and italic_* +
+`monospace / inline code` +
+#highlighted text# +
+[.underline]#underline text# +
+[.line-through]#strikethrough text# +
+^superscript^ +
+~subscript~
+
+== Headings
+
+....
+= Document Title (Level 0)
+== Section Level 1
+=== Section Level 2
+==== Section Level 3
+===== Section Level 4
+====== Section Level 5
+....
+
+== Paragraphs & Line Breaks
+
+Normal paragraphs are separated by a blank line.
+
+Use `+` at the end of a line +
+to force a line break within the same paragraph.
+
+[%hardbreaks]
+Or use the hardbreaks option
+to make every newline
+a line break automatically.
+
+== Lists
+
+=== Unordered List
+
+* Item 1
+* Item 2
+** Nested item 2a
+** Nested item 2b
+*** Deeply nested
+* Item 3
+
+=== Ordered List
+
+. First item
+. Second item
+.. Sub-item a
+.. Sub-item b
+. Third item
+
+=== Checklist
+
+* [*] Completed task
+* [x] Also completed
+* [ ] Incomplete task
+
+=== Description List
+
+Term 1:: Definition of term 1
+Term 2:: Definition of term 2
+Term 3::
+Longer definition that
+spans multiple lines.
+
+== Links
+
+https://example.com[Example Website] +
+link:report.pdf[Download the Report] +
+mailto:user@example.com[Send Email] +
+
+=== Cross References (Antora)
+
+....
+xref:page-name.adoc[Link Text]
+xref:1.0@component:module:page.adoc[Versioned Link]
+....
+
+== Images
+
+=== Block Image (on its own line)
+
+....
+image::filename.png[Alt Text, 600]
+....
+
+=== Inline Image (inside text)
+
+....
+Click the image:icon.png[icon, 16] button.
+....
+
+== Code Blocks
+
+=== Inline Code
+
+Use `System.out.println()` to print.
+
+=== Fenced Code Block
+
+[source,python]
+----
+def hello(name):
+    print(f"Hello, {name}!")
+
+hello("World")
+----
+
+[source,javascript]
+----
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+----
+
+=== Code Block with Callouts
+
+[source,yaml]
+----
+site:
+  title: My Docs # <1>
+content:
+  sources:
+    - url: .       # <2>
+----
+<1> The title shown in the browser tab.
+<2> Use `.` for the current directory.
+
+== Tables
+
+=== Simple Table
+
+|===
+| Header 1 | Header 2 | Header 3
+
+| Cell A1
+| Cell A2
+| Cell A3
+
+| Cell B1
+| Cell B2
+| Cell B3
+|===
+
+=== Table with Column Widths
+
+[cols="1,2,3"]
+|===
+| Narrow | Medium | Wide Column
+
+| A | B | C
+|===
+
+=== Table with Header Row
+
+[%header, cols="2,1,1"]
+|===
+| Name | Status | Priority
+
+| Task Alpha
+| Done
+| High
+
+| Task Beta
+| Pending
+| Low
+|===
+
+=== CSV Table
+
+[%header, format=csv]
+|===
+Name,Voltage,Status
+Cable A,11kV,Pass
+Cable B,33kV,Fail
+|===
+
+== Admonitions
+
+NOTE: This is a note — general information.
+
+TIP: This is a tip — a helpful suggestion.
+
+IMPORTANT: This is important — pay attention.
+
+WARNING: This is a warning — proceed with caution.
+
+CAUTION: This is a caution — risk of danger.
+
+=== Block Admonition (multi-line)
+
+[WARNING]
+====
+This is a multi-line warning block.
+
+It can contain *formatted text*, lists, and even code.
+====
+
+== Quotes & Verse
+
+=== Block Quote
+
+[quote, Albert Einstein]
+____
+Imagination is more important than knowledge.
+____
+
+=== Verse (preserves line breaks)
+
+[verse, William Shakespeare, Hamlet]
+____
+To be, or not to be,
+That is the question.
+____
+
+== Sidebars
+
+.Optional Title
+****
+This is a sidebar block. It visually separates supplemental content from the main text.
+****
+
+== Examples
+
+.Click to expand
+[%collapsible]
+====
+This content is hidden by default and revealed when the user clicks.
+====
+
+== Horizontal Rule
+
+'''
+
+== Page Break (for PDF output)
+
+....
+<<<
+....
+
+== Includes (File Embedding)
+
+....
+\include::shared/common-header.adoc[]
+....
+
+== Document Attributes
+
+=== Setting Attributes
+
+....
+:project-name: My Project
+:version: 2.0
+:sectnums:
+:toc: left
+....
+
+=== Using Attributes
+
+....
+Welcome to {project-name} version {version}.
+....
+
+== Icons (Font Awesome)
+
+....
+icon:check[] Approved
+icon:times[] Rejected
+icon:warning[] Caution
+....
+
+NOTE: Requires `:icons: font` in the document header.
+
+== Keyboard Shortcuts & UI Macros
+
+Press kbd:[Ctrl+S] to save. +
+Press kbd:[Cmd+Shift+R] to hard refresh. +
+Select menu:File[Save As...] from the menu. +
+Click the btn:[OK] button.
+
+== Comments
+
+....
+// This is a single-line comment (not rendered).
+
+////
+This is a multi-line comment block.
+Nothing inside will appear in the output.
+////
+....
+
+== Escaping Special Characters
+
+....
+\*not bold*
+\https://not-a-link.com
+....
+
+== Text Replacements
+
+|===
+| You Type | Output
+
+| `\(C)` | (C)
+| `\(R)` | (R)
+| `\(TM)` | (TM)
+| `\--` | —
+| `\...` | …
+| `\->` | →
+| `\<-` | ←
+| `\=>` | ⇒
+|===

@@ -1,0 +1,71 @@
+= Transformer Hi-Pot Testing Procedure
+:navtitle: Hi-Pot Testing Procedure
+:sectnums:
+
+This document outlines the standard procedure for performing a High Potential (Hi-Pot) test on a transformer to verify the integrity of its insulation.
+
+== Objective
+To determine the dielectric strength of the transformer's insulation and ensure it can safely handle operating voltages without failure.
+
+== Prerequisites
+* **Safety First:** Ensure the transformer is completely de-energized, isolated, and properly grounded.
+* **Equipment Verification:** Verify that the Hi-Pot test equipment is calibrated and functioning correctly.
+* **Personnel:** Only qualified and trained personnel should perform this test.
+* **Clearance:** Establish a clear safety perimeter around the testing area.
+
+== Equipment Required
+* AC or DC High-Potential Test Set (as specified for the transformer rating).
+* Approved insulating gloves and safety glasses.
+* Grounding sticks/cables.
+* Voltage detectors.
+
+== Test Preparation
+. **Disconnect:** Disconnect all external wiring, cables, and busbars from the transformer terminals.
+. **Shorting:** Short-circuit all terminals of the corresponding winding being tested. For example, connect H1, H2, and H3 together.
+. **Grounding:** Solidly ground all windings that are *not* currently being tested, as well as the transformer core and tank.
+. **Cleaning:** Ensure all bushings and terminals are clean and dry.
+
+[WARNING]
+====
+Failure to properly ground non-tested windings can result in dangerous induced voltages and potential damage to the transformer.
+====
+
+== 5. Test Procedure
+The typical test involves applying voltage between one winding and all other windings connected to the ground.
+
+. **Connections:** Connect the high-voltage lead of the test set to the shorted terminals of the winding under test. Connect the ground lead of the test set to the transformer tank/ground.
+. **Initial Voltage:** Start with the test voltage at zero.
+. **Voltage Ramp:** Gradually increase the voltage at a steady rate to the specified test voltage level. Avoid sudden spikes.
+. **Hold Time:** Maintain the test voltage for the specified duration (typically 1 minute for AC tests).
+. **Monitoring:** Monitor the leakage current continuously during the test.
+. **Ramp Down:** After the hold time, gradually decrease the voltage back to zero.
+. **Discharge:** Once the voltage is at zero, turn off the test set and use a grounding stick to discharge the tested winding to ground. Leave the ground connected for a sufficient time to dissipate any stored capacitive charge.
+
+== 6. Test Criteria (Example)
+The tables below are examples. Always refer to the specific manufacturer guidelines or IEEE/IEC standards for exact voltage levels and durations.
+
+|===
+| Winding Voltage Rating | Applied AC Test Voltage | Duration
+
+| < 1 kV
+| 4 kV
+| 1 minute
+
+| 1.2 kV
+| 10 kV
+| 1 minute
+
+| 5 kV
+| 12 kV
+| 1 minute
+|===
+
+[NOTE]
+====
+A successful test is indicated by the insulation withstanding the specified voltage for the required duration without breakdown or excessive leakage current. If the test set trips or the leakage current rises sharply, the test has failed.
+====
+
+== 7. Post-Test Actions
+. Remove all shorting connections.
+. Reconnect all external wiring and busbars.
+. Document the test results, including the applied voltage, duration, leakage current, and ambient conditions (temperature and humidity).

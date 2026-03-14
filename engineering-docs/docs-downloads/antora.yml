@@ -1,0 +1,5 @@
+name: downloads
+title: Downloads
+version: '1.0'
+nav:
+  - modules/ROOT/nav.adoc
